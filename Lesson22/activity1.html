@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const ayham = {
+        name: "Ayham Alsaqqaf",
+        age: "15 years old",
+        skills: "html & css",
+        hometown: "sanaa",
+
+    };
+    console.log("The full name of the student is ",ayham.name)
+
+    // ayham.age = 16
+    // console.log("the correct age is",ayham.age)
+
+    function greet(obj){
+        console.log("hello ", obj.name)
+        console.log("your age is ", obj.age)
+        console.log("Your skills" , obj.skills)
+        console.log("your hometown" , obj.hometown)
+    }
+    greet(ayham);
+
+    let randomNumber = Math.floor(Math.random())* 10 + 1;
+    console.log("random value:", randomNumber)
+
+    let currentdate = new Date();
+    console.log("current date & time is", currentdate);
+    
+</script>    
+</body>
+</html>
