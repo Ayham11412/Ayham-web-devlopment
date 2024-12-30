@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ayham's JS Website</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas ex corrupti quod, est vel sit numquam esse
+        quas repellat incidunt temporibus veritatis, ipsum ea, autem in labore beatae alias iure</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis qui nam eius atque fugit quia neque tenetur
+        architecto, temporibus laudantium dolorum consectetur, ea doloribus tempora minima a officia illum provident?
+    </p>
+    <p id="details"></p>
+
+
+
+
+
+    <script>
+        const person = {
+            name: "ayham",
+            greet() {
+                console.log("Hello, my name is " + this.name)
+            },
+        };
+
+        person.greet();
+
+        // -----------------------------
+
+        class Animal {
+            constructor(name) {
+                this.name = name;
+
+            }
+            speak() {
+                console.log(`${this.name} makes sound.`);
+            }
+        }
+        const dog = new Animal('Dog');
+        dog.speak();
+        // -----------------------------
+
+        class Dog extends Animal {
+            speak() {
+                console.log(`${this.name} barks.`);
+
+            }
+        }
+
+        const myDog = new Dog('frankie');
+        myDog.speak();
+
+        class Cat extends Animal {
+            speak() {
+                console.log(`${this.name} Meaows.`);
+
+            }
+        }
+        const myCat = new Cat('kitty');
+        myCat.speak();
+
+
+        // ----------------------------------------------------
+        class Mathutil {
+            static add(a, b) {
+                return a + b;
+
+            }
+        }
+        console.log(Mathutil.add(635, 837));
+
+        // ----------------------------------------------------
+
+
+        class Car {
+            constructor(brand) {
+                this.carname = brand;
+
+            }
+            present() {
+                return 'I have a' + this.carname
+            }
+        }
+        class Model extends Car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ', it is a' + this.model;
+            }
+        }
+        let myCar = new Model("Range Rover", "Defender");
+        document.getElementById("details").innerHTML = myCar.show();
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
